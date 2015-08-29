@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery流星雨插件演示</title>
+		<meta name="viewport" content="target-densitydpi=320,width=640,user-scalable=no" />
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			if($(window).height()<920){			
+				document.write('<meta name="viewport" content="target-densitydpi=320,width='+920/($(window).height()/640)+',user-scalable=no" />');
+			}
+		</script>
+		<script type="text/javascript" src="js/jquery.meteorShowers-0.0.0.1.js" ></script>
+		<style type="text/css">
+			body{
+				background-image: url(img/bg1.jpg);
+				background-size: 100%;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+	
+	</body>
+	<script>
+		$(function(){
+			var imgs=[
+			'img/lx/lx_1.png',
+			'img/lx/lx_2.png',
+			'img/lx/lx_3.png',
+			'img/lx/lx_4.png',
+			'img/lx/lx_5.png',
+			'img/lx/lx_6.png',
+			'img/lx/lx_7.png',
+			];
+			meteorShowers.option(imgs);//配置流星雨传入流星图片数组
+			meteorShowers.start();//开始流星雨
+			//meteorShowers.stop();//停止流星雨
+			//meteorShowers.end();//结束流星雨
+		})
+	</script>
+</html>
