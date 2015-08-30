@@ -22,13 +22,14 @@ $(function(){
 			y=0;//y坐标为0
 		}else{//流星出生点在左边框
 			x=100;
-			y=Math.random()*30;//做多不到y轴30%
+			y=Math.random()*30;//分布最多不到y轴30%
 		}
-		$('body').append('<div style="left:'+x+'%;top:'+y+'%;" class="meteorShowers"><img src="'+img+'" /></div>');
+		var time=1.8+Math.random()*0.4;//流星生命时间1.8~2.2-秒
+		$('body').append('<div style="left:'+x+'%;top:'+y+'%;-webkit-animation-duration:'+time+'s;" class="meteorShowers"><img src="'+img+'" /></div>');
 		var d=$('.meteorShowers');
 		setTimeout(function(){
 			d.remove();
-		},2000);
+		},2200);
 	}
 	window.drawStart='';
 	window.meteorShowers={
